@@ -1,2 +1,1 @@
--- Features
-    - - Quiz UI implemented with HTML, CSS, JS
+-Quiz UI implemented with HTML, CSS, JS
