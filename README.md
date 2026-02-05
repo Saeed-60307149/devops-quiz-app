@@ -1,1 +1,2 @@
--DevOps question bank with 50 questions added
+- DevOps question bank with 20 questions added
+- Quiz UI implemented with HTML, CSS, and JS
