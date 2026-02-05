@@ -136,6 +136,72 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive automated test suites across layers give confidence that the build is stable and functional, a prerequisite for CD."
+  },
+
+  {
+    "id": "Q11",
+    "topic": "Version Control Systems",
+    "question": "Which Git branching model aligns best with Continuous Integration/CD?",
+    "options": [
+      "Gitflow (with develop, release, feature branches)",
+      "Trunk-based development",
+      "One permanent branch per environment",
+      "GitHub Flow with long-lived branches"
+    ],
+    "answerIndex": 1,
+    "explanation": "Trunk-based development uses short-lived branches merged frequently into the trunk/main, reducing integration risk and supporting fast CI/CD cycles."
+  },
+  {
+    "id": "Q12",
+    "topic": "Version Control Systems",
+    "question": "What is the primary purpose of a pull request (or merge request)?",
+    "options": [
+      "To delete old code",
+      "To propose changes, enable code review, and discuss before merging",
+      "To automatically deploy code",
+      "To create a new repository"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pull requests facilitate collaboration, code quality checks via reviews, automated builds/tests, and discussion before integration into the main branch."
+  },
+  {
+    "id": "Q13",
+    "topic": "Version Control Systems",
+    "question": "In Git, what command integrates changes from one branch into another while preserving history?",
+    "options": [
+      "git rebase",
+      "git merge",
+      "git cherry-pick",
+      "git reset"
+    ],
+    "answerIndex": 1,
+    "explanation": "git merge creates a merge commit that combines histories from both branches, unlike rebase which rewrites history."
+  },
+  {
+    "id": "Q14",
+    "topic": "Version Control Systems",
+    "question": "What is a common risk of using git rebase in shared branches?",
+    "options": [
+      "Faster performance",
+      "Rewriting public history, causing issues for collaborators",
+      "Automatic conflict resolution",
+      "No impact on history"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rebasing shared/public branches rewrites commit hashes, breaking references for others who have pulled the original commits—use merge instead for shared work."
+  },
+  {
+    "id": "Q15",
+    "topic": "Version Control Systems",
+    "question": "Which practice helps avoid 'merge hell' in version control?",
+    "options": [
+      "Keeping feature branches alive for months",
+      "Frequent integration of small changes",
+      "Disabling pull requests",
+      "Using only the main branch for all work"
+    ],
+    "answerIndex": 1,
+    "explanation": "Frequent small merges (trunk-based or short-lived branches) prevent large conflicting changes from accumulating, reducing merge complexity."
   }
 
 ]
