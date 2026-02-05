@@ -15,14 +15,57 @@
   {
     "id": "Q2",
     "topic": "Continuous Integration",
-    "question": "What is the primary goal of Continuous Integration?",
+    "question": "Which practice is considered essential for effective Continuous Integration?",
     "options": [
-      "Automatically deploy to production",
-      "Frequently integrate code changes into a shared repository",
-      "Eliminate the need for testing",
-      "Remove the need for branches"
+      "Maintaining long-lived feature branches",
+      "Running automated tests on every commit",
+      "Manual code review after deployment",
+      "Deploying directly from developer machines"
     ],
     "answerIndex": 1,
-    "explanation": "Continuous Integration aims to detect integration issues early."
+    "explanation": "Automated tests (unit, integration, etc.) must run on every commit/push to catch issues quickly — this is a cornerstone of successful CI."
+  },
+
+  {
+    "id": "Q3",
+    "topic": "Continuous Integration",
+    "question": "Which tool is most commonly used as a Continuous Integration server?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Terraform"
+    ],
+    "answerIndex": 2,
+    "explanation": "Jenkins is the most widely adopted open-source automation server specifically designed for implementing Continuous Integration pipelines, though many modern alternatives exist."
+  },
+
+  {
+    "id": "Q4",
+    "topic": "Continuous Integration",
+    "question": "What is a common recommended frequency for commits in a healthy CI practice?",
+    "options": [
+      "Once per sprint",
+      "Once per week",
+      "Multiple times per day",
+      "Only before release"
+    ],
+    "answerIndex": 2,
+    "explanation": "CI encourages developers to integrate changes frequently—ideally multiple times a day—to catch integration issues early and reduce the size/complexity of merges."
+  },
+
+  {
+    "id": "Q5",
+    "topic": "Continuous Integration",
+    "question": "What happens if a build fails in a CI pipeline?",
+    "options": [
+      "The code is automatically deployed anyway",
+      "The team is notified and the issue must be fixed before proceeding",
+      "It is ignored to maintain velocity",
+      "Production is rolled back automatically"
+    ],
+    "answerIndex": 1,
+    "explanation": "A failing build 'breaks the build'—the team stops and fixes it immediately to maintain a working main branch, a core CI principle."
   }
+
 ]
