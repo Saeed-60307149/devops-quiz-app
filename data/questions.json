@@ -15,14 +15,267 @@
   {
     "id": "Q2",
     "topic": "Continuous Integration",
-    "question": "What is the primary goal of Continuous Integration?",
+    "question": "Which practice is considered essential for effective Continuous Integration?",
     "options": [
-      "Automatically deploy to production",
-      "Frequently integrate code changes into a shared repository",
-      "Eliminate the need for testing",
-      "Remove the need for branches"
+      "Maintaining long-lived feature branches",
+      "Running automated tests on every commit",
+      "Manual code review after deployment",
+      "Deploying directly from developer machines"
     ],
     "answerIndex": 1,
-    "explanation": "Continuous Integration aims to detect integration issues early."
+    "explanation": "Automated tests (unit, integration, etc.) must run on every commit/push to catch issues quickly — this is a cornerstone of successful CI."
+  },
+
+  {
+    "id": "Q3",
+    "topic": "Continuous Integration",
+    "question": "Which tool is most commonly used as a Continuous Integration server?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Terraform"
+    ],
+    "answerIndex": 2,
+    "explanation": "Jenkins is the most widely adopted open-source automation server specifically designed for implementing Continuous Integration pipelines, though many modern alternatives exist."
+  },
+
+  {
+    "id": "Q4",
+    "topic": "Continuous Integration",
+    "question": "What is a common recommended frequency for commits in a healthy CI practice?",
+    "options": [
+      "Once per sprint",
+      "Once per week",
+      "Multiple times per day",
+      "Only before release"
+    ],
+    "answerIndex": 2,
+    "explanation": "CI encourages developers to integrate changes frequently—ideally multiple times a day—to catch integration issues early and reduce the size/complexity of merges."
+  },
+
+  {
+    "id": "Q5",
+    "topic": "Continuous Integration",
+    "question": "What happens if a build fails in a CI pipeline?",
+    "options": [
+      "The code is automatically deployed anyway",
+      "The team is notified and the issue must be fixed before proceeding",
+      "It is ignored to maintain velocity",
+      "Production is rolled back automatically"
+    ],
+    "answerIndex": 1,
+    "explanation": "A failing build 'breaks the build'—the team stops and fixes it immediately to maintain a working main branch, a core CI principle."
   }
+
+  {
+    "id": "Q6",
+    "topic": "Continuous Delivery",
+    "question": "In Continuous Delivery, what is the state of every successful build artifact?",
+    "options": [
+      "Automatically live in production",
+      "Ready to be deployed to production with minimal effort",
+      "Only suitable for development",
+      "Requires full manual re-testing"
+    ],
+    "answerIndex": 1,
+    "explanation": "The defining goal of CD is that every change passing the pipeline is releasable—production deployment is possible at any time, often via a manual approval step."
+  },
+
+  {
+    "id": "Q7",
+    "topic": "Continuous Delivery",
+    "question": "Which practice supports achieving Continuous Delivery?",
+    "options": [
+      "Long-lived release branches",
+      "Automated acceptance testing in the pipeline",
+      "Manual deployment scripts run weekly",
+      "Separate teams for build and release"
+    ],
+    "answerIndex": 1,
+    "explanation": "Automated testing (including end-to-end/acceptance tests) ensures confidence that the software works, enabling reliable 'one-click' or low-friction releases."
+  },
+
+  {
+    "id": "Q8",
+    "topic": "Continuous Delivery",
+    "question": "What is a key difference between Continuous Delivery and Continuous Deployment?",
+    "options": [
+      "Continuous Delivery has no automation",
+      "Continuous Deployment deploys every passing change to production automatically",
+      "Continuous Delivery requires no testing",
+      "Continuous Deployment skips staging environments"
+    ],
+    "answerIndex": 1,
+    "explanation": "CD gets changes to a deployable state (manual go/no-go), while Continuous Deployment removes the manual step and deploys automatically if all checks pass."
+  },
+
+  {
+    "id": "Q9",
+    "topic": "Continuous Delivery",
+    "question": "Why is feature toggling (feature flags) valuable in Continuous Delivery?",
+    "options": [
+      "It replaces version control",
+      "It allows dark launches and safe rollouts of incomplete features",
+      "It eliminates the need for branches",
+      "It automates security scans only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Feature flags decouple deployment from release—code can be deployed but hidden until ready, supporting frequent deploys without exposing unfinished work."
+  },
+
+  {
+    "id": "Q10",
+    "topic": "Continuous Delivery",
+    "question": "What should a CD pipeline ideally include before considering a release candidate production-ready?",
+    "options": [
+      "Only unit tests",
+      "Automated unit, integration, acceptance, and performance tests",
+      "Manual code reviews only",
+      "No tests, just builds"
+    ],
+    "answerIndex": 1,
+    "explanation": "Comprehensive automated test suites across layers give confidence that the build is stable and functional, a prerequisite for CD."
+  },
+
+  {
+    "id": "Q11",
+    "topic": "Version Control Systems",
+    "question": "Which Git branching model aligns best with Continuous Integration/CD?",
+    "options": [
+      "Gitflow (with develop, release, feature branches)",
+      "Trunk-based development",
+      "One permanent branch per environment",
+      "GitHub Flow with long-lived branches"
+    ],
+    "answerIndex": 1,
+    "explanation": "Trunk-based development uses short-lived branches merged frequently into the trunk/main, reducing integration risk and supporting fast CI/CD cycles."
+  },
+
+  {
+    "id": "Q12",
+    "topic": "Version Control Systems",
+    "question": "What is the primary purpose of a pull request (or merge request)?",
+    "options": [
+      "To delete old code",
+      "To propose changes, enable code review, and discuss before merging",
+      "To automatically deploy code",
+      "To create a new repository"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pull requests facilitate collaboration, code quality checks via reviews, automated builds/tests, and discussion before integration into the main branch."
+  },
+
+  {
+    "id": "Q13",
+    "topic": "Version Control Systems",
+    "question": "In Git, what command integrates changes from one branch into another while preserving history?",
+    "options": [
+      "git rebase",
+      "git merge",
+      "git cherry-pick",
+      "git reset"
+    ],
+    "answerIndex": 1,
+    "explanation": "git merge creates a merge commit that combines histories from both branches, unlike rebase which rewrites history."
+  },
+
+  {
+    "id": "Q14",
+    "topic": "Version Control Systems",
+    "question": "What is a common risk of using git rebase in shared branches?",
+    "options": [
+      "Faster performance",
+      "Rewriting public history, causing issues for collaborators",
+      "Automatic conflict resolution",
+      "No impact on history"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rebasing shared/public branches rewrites commit hashes, breaking references for others who have pulled the original commits—use merge instead for shared work."
+  },
+
+  {
+    "id": "Q15",
+    "topic": "Version Control Systems",
+    "question": "Which practice helps avoid 'merge hell' in version control?",
+    "options": [
+      "Keeping feature branches alive for months",
+      "Frequent integration of small changes",
+      "Disabling pull requests",
+      "Using only the main branch for all work"
+    ],
+    "answerIndex": 1,
+    "explanation": "Frequent small merges (trunk-based or short-lived branches) prevent large conflicting changes from accumulating, reducing merge complexity."
+  },
+
+  {
+    "id": "Q16",
+    "topic": "DevOps Culture",
+    "question": "What does the 'C' in CALMS stand for?",
+    "options": [
+      "Control",
+      "Culture",
+      "Compliance",
+      "Continuous"
+    ],
+    "answerIndex": 1,
+    "explanation": "CALMS = Culture, Automation, Lean, Measurement, Sharing—a framework highlighting the cultural shift needed for successful DevOps adoption."
+  },
+
+  {
+    "id": "Q17",
+    "topic": "DevOps Culture",
+    "question": "Which of these best describes DevOps culture?",
+    "options": [
+      "Strict separation of dev and ops responsibilities",
+      "Shared ownership and accountability across the software lifecycle",
+      "Developers never interact with production",
+      "Operations handles all changes without dev input"
+    ],
+    "answerIndex": 1,
+    "explanation": "DevOps promotes cross-functional collaboration, breaking down silos so everyone shares responsibility for building, delivering, and operating software."
+  },
+
+  {
+    "id": "Q18",
+    "topic": "DevOps Culture",
+    "question": "What is a key characteristic of a generative (high-trust) DevOps culture?",
+    "options": [
+      "Blame assigned quickly after failures",
+      "Encouraging learning from failures and information flow",
+      "Heavy bureaucracy and approvals",
+      "Isolated teams with little communication"
+    ],
+    "answerIndex": 1,
+    "explanation": "Generative cultures (per Westrum model) feature high cooperation, risk-sharing, bridging, and learning from incidents rather than blame."
+  },
+
+  {
+    "id": "Q19",
+    "topic": "DevOps Culture",
+    "question": "Why is 'sharing' important in the CALMS framework?",
+    "options": [
+      "To restrict knowledge to senior staff",
+      "To promote transparency, collaboration, and collective ownership",
+      "To automate everything manually",
+      "To measure only individual performance"
+    ],
+    "answerIndex": 1,
+    "explanation": "Sharing tools, knowledge, processes, and lessons learned breaks down silos and accelerates improvement across teams."
+  },
+  
+  {
+    "id": "Q20",
+    "topic": "DevOps Culture",
+    "question": "Which practice reflects DevOps cultural principles?",
+    "options": [
+      "Blaming individuals for production outages",
+      "Blameless post-mortems after incidents",
+      "Requiring 10 approvals for every change",
+      "Keeping security as a separate late-stage gate"
+    ],
+    "answerIndex": 1,
+    "explanation": "Blameless post-mortems focus on systemic improvements and learning rather than individual fault, fostering psychological safety and continuous improvement."
+  }
+
 ]
