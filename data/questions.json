@@ -66,7 +66,7 @@
     ],
     "answerIndex": 1,
     "explanation": "A failing build 'breaks the build'—the team stops and fixes it immediately to maintain a working main branch, a core CI principle."
-  }
+  },
 
   {
     "id": "Q6",
