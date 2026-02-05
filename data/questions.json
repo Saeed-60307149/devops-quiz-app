@@ -68,4 +68,74 @@
     "explanation": "A failing build 'breaks the build'—the team stops and fixes it immediately to maintain a working main branch, a core CI principle."
   }
 
+  {
+    "id": "Q6",
+    "topic": "Continuous Delivery",
+    "question": "In Continuous Delivery, what is the state of every successful build artifact?",
+    "options": [
+      "Automatically live in production",
+      "Ready to be deployed to production with minimal effort",
+      "Only suitable for development",
+      "Requires full manual re-testing"
+    ],
+    "answerIndex": 1,
+    "explanation": "The defining goal of CD is that every change passing the pipeline is releasable—production deployment is possible at any time, often via a manual approval step."
+  },
+
+  {
+    "id": "Q7",
+    "topic": "Continuous Delivery",
+    "question": "Which practice supports achieving Continuous Delivery?",
+    "options": [
+      "Long-lived release branches",
+      "Automated acceptance testing in the pipeline",
+      "Manual deployment scripts run weekly",
+      "Separate teams for build and release"
+    ],
+    "answerIndex": 1,
+    "explanation": "Automated testing (including end-to-end/acceptance tests) ensures confidence that the software works, enabling reliable 'one-click' or low-friction releases."
+  },
+
+  {
+    "id": "Q8",
+    "topic": "Continuous Delivery",
+    "question": "What is a key difference between Continuous Delivery and Continuous Deployment?",
+    "options": [
+      "Continuous Delivery has no automation",
+      "Continuous Deployment deploys every passing change to production automatically",
+      "Continuous Delivery requires no testing",
+      "Continuous Deployment skips staging environments"
+    ],
+    "answerIndex": 1,
+    "explanation": "CD gets changes to a deployable state (manual go/no-go), while Continuous Deployment removes the manual step and deploys automatically if all checks pass."
+  },
+
+  {
+    "id": "Q9",
+    "topic": "Continuous Delivery",
+    "question": "Why is feature toggling (feature flags) valuable in Continuous Delivery?",
+    "options": [
+      "It replaces version control",
+      "It allows dark launches and safe rollouts of incomplete features",
+      "It eliminates the need for branches",
+      "It automates security scans only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Feature flags decouple deployment from release—code can be deployed but hidden until ready, supporting frequent deploys without exposing unfinished work."
+  },
+
+  {
+    "id": "Q10",
+    "topic": "Continuous Delivery",
+    "question": "What should a CD pipeline ideally include before considering a release candidate production-ready?",
+    "options": [
+      "Only unit tests",
+      "Automated unit, integration, acceptance, and performance tests",
+      "Manual code reviews only",
+      "No tests, just builds"
+    ],
+    "answerIndex": 1,
+    "explanation": "Comprehensive automated test suites across layers give confidence that the build is stable and functional, a prerequisite for CD."
+  }
+
 ]
